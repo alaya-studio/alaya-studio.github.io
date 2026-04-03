@@ -201,10 +201,85 @@
             color: var(--text-dim);
         }
 
+        .join-section {
+            margin-top: 56px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+        }
+
+        .join-section h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .join-desc {
+            font-size: 15px;
+            color: var(--text-dim);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .join-desc strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .join-roles {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .role-card {
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.03);
+            transition: border-color 0.25s, transform 0.25s;
+        }
+
+        .role-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .role-icon {
+            font-size: 20px;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .role-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .role-card p {
+            font-size: 13px;
+            color: var(--text-dim);
+            line-height: 1.5;
+        }
+
+        .join-contact {
+            font-size: 14px;
+            color: var(--text-dim);
+        }
+
+        .join-contact a {
+            color: var(--accent);
+            border-bottom: 1px dashed var(--accent);
+        }
+
         @media (max-width: 600px) {
             .work-card { padding: 18px 20px; }
             .work-info h2 { font-size: 17px; }
             .header-nav { display: none; }
+            .join-roles { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -218,7 +293,7 @@
             <div class="header-right">
                 <nav class="header-nav">
                     <a href="https://alaya-studio.github.io">HOME</a>
-                    <a href="">Join Us</a>
+                    <a href="#join">Join Us</a>
                 </nav>
                 <a href="https://github.com/ShandaAI" class="header-icon"><i class="fab fa-github"></i></a>
                 <a href="https://x.com/alayastd" class="header-icon"><i class="fab fa-x-twitter"></i></a>
@@ -253,6 +328,34 @@
                 <span class="work-tag work-tag--new">New</span>
             </a>
         </div>
+
+        <section class="join-section" id="join">
+            <h2>Join Us</h2>
+            <p class="join-desc">We are actively hiring technical members to build the next generation of world models. Positions are based in <strong>Tokyo</strong> and <strong>Shanghai</strong>.</p>
+            <div class="join-roles">
+                <div class="role-card">
+                    <div class="role-icon"><i class="fas fa-gamepad"></i></div>
+                    <h3>Game Engineer</h3>
+                    <p>Unreal Engine expertise. Build rendering pipelines and game integrations.</p>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI Researcher</h3>
+                    <p>Generative models, inverse rendering, world models. Publish at top venues.</p>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon"><i class="fas fa-code"></i></div>
+                    <h3>AI Engineer</h3>
+                    <p>Build scalable training and inference systems for large generative models.</p>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Intern</h3>
+                    <p>Research or engineering internships. Work on cutting-edge projects with the team.</p>
+                </div>
+            </div>
+            <p class="join-contact">Interested? Reach out at <a href="mailto:careers@shanda.ai">careers@shanda.ai</a></p>
+        </section>
 
         <footer>Powered by Shanda AI Research Tokyo</footer>
     </div>
