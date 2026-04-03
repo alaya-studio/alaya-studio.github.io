@@ -9,6 +9,7 @@
     <meta property="og:description" content="Research on generative world rendering.">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -45,11 +46,57 @@
             flex-direction: column;
         }
 
+        .site-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 48px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 8px;
+        }
+
+        .header-nav a {
+            padding: 6px 16px;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 500;
+            border-radius: 80px;
+            border: 1px solid transparent;
+            background: rgba(255, 255, 255, 0.05);
+            transition: all 0.2s ease;
+            font-family: "Space Grotesk", sans-serif;
+            text-decoration: none;
+        }
+
+        .header-nav a:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .header-icon {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 18px;
+            transition: color 0.2s ease;
+        }
+
+        .header-icon:hover {
+            color: #fff;
+        }
+
         .logo-row {
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-bottom: 48px;
         }
 
         .logo-row img {
@@ -157,17 +204,28 @@
         @media (max-width: 600px) {
             .work-card { padding: 18px 20px; }
             .work-info h2 { font-size: 17px; }
+            .header-nav { display: none; }
         }
     </style>
 </head>
 <body>
     <div class="page">
-        <a class="logo-row" href="https://alaya-studio.github.io">
-            <img src="static/images/logo.png" alt="Alaya Studio">
-            <span><span class="bold">ALAYA</span> <span class="light">STUDIO</span></span>
-        </a>
+        <header class="site-header">
+            <a class="logo-row" href="https://alaya-studio.github.io">
+                <img src="static/images/logo.png" alt="Alaya Studio">
+                <span><span class="bold">ALAYA</span> <span class="light">STUDIO</span></span>
+            </a>
+            <div class="header-right">
+                <nav class="header-nav">
+                    <a href="https://alaya-studio.github.io">HOME</a>
+                    <a href="">Join Us</a>
+                </nav>
+                <a href="https://github.com/ShandaAI" class="header-icon"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/alayastd" class="header-icon"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </header>
 
-        <h1>Building Frontier World Model for <span class="accent">Next-generation Game</span></h1>
+        <h1>Building frontier world model for <span class="accent">next-generation game</span></h1>
         <!-- <p class="tagline">We work on next-generation world model.</p> -->
 
         <div class="works">
